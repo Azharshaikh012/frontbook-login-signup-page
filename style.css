@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./images/blue-social-media-background.avif');
+   
+}
+
+.main-container{
+display: flex;
+justify-content: center;
+/* align-items: center;
+text-align: center; */
+height: 100vh;
+font-family:sans-serif;
+}
+
+.page-img{
+    width: 100%;
+}
+
+.login-container{
+    margin: auto;
+    background: rgba(182, 230, 252, 0.8);
+    padding: 20px 20px;
+    border-radius: 10px;
+    /* display: grid; */
+    text-align: center;
+}
+
+.title-name{
+    color: blue;
+ font-weight: 800;
+ font-size: xx-large;
+ padding:10px 5px;
+ margin-bottom: 10px;
+
+}
+a {
+    text-decoration:none;
+}
+
+.login-form{
+    display: grid;
+    gap:5px;
+}
+
+.input{
+    padding: 10px 4px ;
+    font-size: large;
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    margin: 10px 0;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.singup-btn{
+    width: 100%;
+    color: white;
+}
+
+.errorDesign{
+    color: rgb(182, 6, 6);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+.forgot-password{
+    cursor: pointer;
+}
+
