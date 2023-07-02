@@ -84,3 +84,31 @@ a {
     cursor: pointer;
 }
 
+
+
+/* Sign Up page some element style */
+.login-container{
+    width: 40%;
+}
+.btn{
+    width: 20%;
+    margin: auto;
+    margin-top:10px ;
+}
+.input{
+    width: 70%;
+    margin: auto;
+}
+.help{
+    margin-top: 10px;
+}
+.link{
+    color: white;
+}
+.help{
+    font-weight: 700;
+    cursor: pointer;
+}
+.singup-btn{
+    width: 80%;
+}

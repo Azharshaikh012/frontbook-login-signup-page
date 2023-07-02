@@ -4,39 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./signup.js" defer></script>
     <title>Frontbook/Signup</title>
-    <style>
-        .login-container{
-            width: 40%;
-        }
-        .btn{
-            width: 20%;
-            margin: auto;
-            margin-top:10px ;
-        }
-        .input{
-            width: 70%;
-            margin: auto;
-        }
-        .help{
-            margin-top: 10px;
-        }
-        .link{
-            color: white;
-        }
-        .help{
-            font-weight: 700;
-            cursor: pointer;
-        }
-        .singup-btn{
-            width: 80%;
-        }
-        
-    </style>
 </head>
 <body>
     <div class="main-container">
-        
         <!-- <img src="./images/bg-img.jpg" alt="" class="page-img"> -->
         <div class="login-container">
         <h2 class="title-name"><a href="#">Frontbook </a></h2>
@@ -56,8 +28,6 @@
             <input type="text" placeholder="Confirm Password" class="cpassword input">
             <p class="errorDesign" id="cpasswordError"></p>
 
-                
-
             <input type="submit" class="singup-btn btn" value="Create account">
         </form>
         <div class="btn-cont">
@@ -65,76 +35,5 @@
         <p class="forgot-password help">You have already account</p>
     </div>
     </div>
-
-<script>
-        const firstName = document.querySelector(".firstName");
-        const lastName= document.querySelector(".lastName");
-        const email = document.querySelector(".email");
-        const password = document.querySelector(".password");
-        const confPassword = document.querySelector(".cpassword");
-
-        const fnameMsg = document.querySelector("#errorFirstName");
-        const lnameMsg = document.querySelector("#errorLastName");
-        const emailMsg = document.querySelector("#errorEmail");
-        const passwordMsg = document.querySelector("#passwordError");
-        const confpasswordMsg = document.querySelector("#cpasswordError");
-        const creatAccount = document.querySelector(".submit-form");
-        const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        
-
-    creatAccount.addEventListener('submit', (e) =>{
-     e.preventDefault();
-     if(firstName.value == ""){
-    fnameMsg.innerHTML ="**First name is empty..";
-   } else if(firstName.value.length <=3){
-    fnameMsg.innerHTML = "**First name is too short"; 
-   } else{
-    fnameMsg.innerHTML = null;  
-   }
-//  -------------------------------------
-   if(lastName.value == ""){
-    lnameMsg.innerHTML ="**Last name is empty.."; 
-   } else{
-    lnameMsg.innerHTML = null;  
-   }
-//  -------------------------------------
-if(email.value == ""){
-    emailMsg.innerHTML = "**Email is empty";
-}else if (email.value.match(validRegex)){
-    emailMsg.innerHTML = null;        
-}else {
-    emailMsg.innerHTML = "**Invalide email";
-}
-//  -------------------------------------
-if(password.value.length < 5 && password.value != ""){
-       passwordMsg.innerHTML = "**Password length must be atleast 8 characters";
-    
-   } else if(password.value === "") {
-       passwordMsg.innerHTML = "**Password is empty";
-   }else if(password.value.length >15){
-        passwordMsg.innerHTML = "**Password length must not exceed 15 characters";
-   }else {
-   passwordMsg.innerHTML= null;
-}
-//  -------------------------------------
-if(confPassword.value !== password.value){
-    confpasswordMsg.innerHTML = "**Password does not match.";
-}else if(confPassword.value === ""){
-    confpasswordMsg.innerHTML = "**Password is empty";
-}
-else{
-    confpasswordMsg.innerHTML = null;
-    creatAccount.submit();
-         let myWindow = window.open("", "_blank",);
-         myWindow.document.write(`<h2 style="color:blue">You clicked Sign up button</h2> <button style="padding:10px 20px; background-color:red; color:white; font-weight: 700; cursor: pointer;" > Back </button>`);
-}
-});
-
-document.querySelector(".help").addEventListener("click", ()=> {
-      window.open("./index.html", "MsgWindow");
-    });
-
-</script>
-    
 </body>
 </html>
