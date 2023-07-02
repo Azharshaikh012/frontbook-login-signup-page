@@ -66,11 +66,7 @@
     </div>
     </div>
 
-
-
-
-
-    <script>
+<script>
         const firstName = document.querySelector(".firstName");
         const lastName= document.querySelector(".lastName");
         const email = document.querySelector(".email");
@@ -88,56 +84,28 @@
 
     creatAccount.addEventListener('submit', (e) =>{
      e.preventDefault();
-    });
- 
-
-    function formValidation() {
-   
-   if(firstName.value == ""){
+     if(firstName.value == ""){
     fnameMsg.innerHTML ="**First name is empty..";
-    console.log("First name is empty");
-
-
    } else if(firstName.value.length <=3){
-    fnameMsg.innerHTML = "**First name is too short";
-    console.log("First name is too short");
-
-   
+    fnameMsg.innerHTML = "**First name is too short"; 
    } else{
-    fnameMsg.innerHTML = "";
-    console.log("firstname Success");
-    
+    fnameMsg.innerHTML = null;  
    }
-
 //  -------------------------------------
    if(lastName.value == ""){
-    lnameMsg.innerHTML ="**Last name is empty..";
-    console.log("last name empty");
-
-
-   
+    lnameMsg.innerHTML ="**Last name is empty.."; 
    } else{
-    lnameMsg.innerHTML = "";
-    
+    lnameMsg.innerHTML = null;  
    }
-
-
 //  -------------------------------------
-
-
 if(email.value == ""){
     emailMsg.innerHTML = "**Email is empty";
 }else if (email.value.match(validRegex)){
-    emailMsg.innerHTML = "";
-    
-         
+    emailMsg.innerHTML = null;        
 }else {
     emailMsg.innerHTML = "**Invalide email";
 }
 //  -------------------------------------
-
-
-
 if(password.value.length < 5 && password.value != ""){
        passwordMsg.innerHTML = "**Password length must be atleast 8 characters";
     
@@ -146,36 +114,27 @@ if(password.value.length < 5 && password.value != ""){
    }else if(password.value.length >15){
         passwordMsg.innerHTML = "**Password length must not exceed 15 characters";
    }else {
-   passwordMsg.innerHTML= "";
+   passwordMsg.innerHTML= null;
 }
 //  -------------------------------------
-
 if(confPassword.value !== password.value){
     confpasswordMsg.innerHTML = "**Password does not match.";
 }else if(confPassword.value === ""){
     confpasswordMsg.innerHTML = "**Password is empty";
 }
 else{
-    confpasswordMsg.innerHTML = "";
-    
+    confpasswordMsg.innerHTML = null;
     creatAccount.submit();
          let myWindow = window.open("", "_blank",);
          myWindow.document.write(`<h2 style="color:blue">You clicked Sign up button</h2> <button style="padding:10px 20px; background-color:red; color:white; font-weight: 700; cursor: pointer;" > Back </button>`);
 }
-//  -------------------------------------
+});
 
-    }
-
-
-document.querySelector(".help").addEventListener("click", function() {
+document.querySelector(".help").addEventListener("click", ()=> {
       window.open("./index.html", "MsgWindow");
     });
 
-
-
-
-
-    </script>
+</script>
     
 </body>
 </html>
