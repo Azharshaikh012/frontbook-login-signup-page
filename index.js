@@ -1,12 +1,12 @@
-const userName = document.querySelector(".username");
-const password = document.querySelector(".password");
-const userNameMsg = document.querySelector("#errorUserName");
-const userPasswordMsg = document.querySelector("#passwordError");
 const submitForm = document.querySelector(".login-form");
-
 
 submitForm.addEventListener('submit', (e) =>{
      e.preventDefault();
+
+      const userName = document.querySelector(".username");
+      const password = document.querySelector(".password");
+      const userNameMsg = document.querySelector("#errorUserName");
+      const userPasswordMsg = document.querySelector("#passwordError");
 
    if(userName.value === ""){
       userNameMsg.innerHTML ="* Username is empty..";
@@ -26,6 +26,10 @@ submitForm.addEventListener('submit', (e) =>{
 
    }else{
       userPasswordMsg.innerHTML = null;
+   }
+
+   if(userName.value !== "" && password.value !== "" && userName.value.length >=3 && password.value ==="Thinkflair"){
+
       submitForm.submit();
       let myWindow = window.open("", "_blank");
       myWindow.document.write("<h2>You clicked login button</h2>");   
